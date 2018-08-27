@@ -20,5 +20,5 @@ In this case, only two tiles are misplaced: the empty tile and the 1 tile. Howev
 We can determine by just looking that this case requires only 3 slides to solve (left, down, right), but because it has 4 misplaced tiles instead of 2, its heuristic distance is actually higher.
 
 
-**3. A* with Manhattan Heuristic**
+**3. A\* with Manhattan Heuristic**
 To solve this shortcoming, we use another heuristic that returns the sum of L1 distances of all tiles to its goal-position. This distance measure makes intuitive sense because tiles can only slide horizontally or vertically. Both previous examples under this heuristic would have an h¬_n¬ value of 4. This is a much less biased evaluation of the states although it is still not perfect as we can clearly see in the first example if we were to move 1 back to the upper left corner, we would mess up the ordering of other tiles, so the second case should get a much lower value.
