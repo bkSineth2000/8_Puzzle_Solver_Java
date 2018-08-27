@@ -6,7 +6,7 @@ A simple 8 Puzzle Solver in Java capable of solving all combinations of legal 8 
 Uniform cost search is the general version of breadth-first search where only the cost of each node is considered with the heuristic function h(n) evaluating to 0 at every node. For the 8 Puzzle game, since each operation takes an atomic step, the weight of every edge in the game tree is always 1. In this case, uniform cost search simply equals breadth-first search.
 In my program, in order to make all algorithms as general as possible, I implemented uniform cost search simply as A* search with a heuristic value (h_n) of 0.
 
-**2. A* with Misplaced Tile Heuristic**
+**2. A\* with Misplaced Tile Heuristic**
 This heuristic function returns the number of misplaced tiles of a state. That is to say, it evaluates every tile of every game board to see if it is in the goal-state location. If not, h_n will increment by 1 for every tile. Hence the worst possible h_n for any 8 Puzzle is 9.
 
 This heuristic encourages the program to expand nodes in the queue that have the most number of correctly placed tiles. This in most cases means a desirable state, although it would misevaluate some layouts such as the following example:
