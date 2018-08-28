@@ -21,4 +21,12 @@ We can determine by just looking that this case requires only 3 slides to solve 
 
 
 **3. A\* with Manhattan Heuristic**
-To solve this shortcoming, we use another heuristic that returns the sum of L1 distances of all tiles to its goal-position. This distance measure makes intuitive sense because tiles can only slide horizontally or vertically. Both previous examples under this heuristic would have an h¬_n¬ value of 4. This is a much less biased evaluation of the states although it is still not perfect as we can clearly see in the first example if we were to move 1 back to the upper left corner, we would mess up the ordering of other tiles, so the second case should get a much lower value.
+To solve this shortcoming, we use another heuristic that returns the sum of L1 distances of all tiles to its goal-position. This distance measure makes intuitive sense because tiles can only slide horizontally or vertically. Both previous examples under this heuristic would have an h_n value of 4. This is a much less biased evaluation of the states although it is still not perfect as we can clearly see in the first example if we were to move 1 back to the upper left corner, we would mess up the ordering of other tiles, so the second case should get a much lower value.
+
+**Algorithms Comparison**
+In order to compare each algorithm, I decided to use the 5 preset states in the project description along with the following 5 hard states which I made with the help of the n-puzzle-solver (cited in cover page). These states all rank between doable and ohBoy to fill the sudden jump in difficulty of the ohBoy preset, and are themselves ranked in increasing order of difficulty (solution node depth), with 1 being the easiest and 5 being the most difficult. <br>
+*Hard 1......Hard2.......Hard3.......Hard4.......Hard5* <br>
+[[1, 5, 2],.[[2, 8, 3],.[[1, 3, 5],.[[5, 6, 1],.[[8, 5, 1], <br>
+[4, 3, 0],..[1, 5, 6],....[4, 0, 7],..[4, 2, 3],...[2, 6, 7], <br>
+[7, 8, 6]]..[0, 4, 7]]..[8, 2, 6]]..[7, 8, 0]]..[0, 4, 3]] <br>
+Finally, the following two properties are used to determine the time complexity of each implementation with respect to the increasing difficulty of problems: number of nodes expanded which is directly related to the performance of an algorithm as well as the actual time taken for the algorithm to terminate, in milliseconds.
