@@ -37,7 +37,6 @@ The following graph shows the number of nodes expanded for all three algorithms 
 
 The Time Taken graph displays a similar behavior with A\* with Misplaced Tiles, outperforming Uniform Cost Search at all levels except for easy. A\* Manhattan on the other hand, remains the fastest and most scalable algorithm. Note that for the highest difficulty, it is infeasible to use the uniform cost search approach because it uses approximately 524 seconds to find a solution and expanded more than 100,000 nodes.
 
-<img src="https://github.com/MrDavidYu/8_Puzzle_Solver_Java/blob/master/res/Time_Taken.png" width="500" height="300" />
-<img src="https://github.com/MrDavidYu/8_Puzzle_Solver_Java/blob/master/res/Max_Q_Size.png" width="500" height="300" />
+<img src="https://github.com/MrDavidYu/8_Puzzle_Solver_Java/blob/master/res/Time_Taken.png" width="500" height="300" /> <img src="https://github.com/MrDavidYu/8_Puzzle_Solver_Java/blob/master/res/Max_Q_Size.png" width="500" height="300" />
 
 To account for space complexity, I also measured the maximum size of the queue for all difficulty settings. Again, the three algorithms behaved as we would expect, with uniform cost search quickly reaching an exponential growth after hard1 and Misplaced Tiles reaching take off after hard4 and Manhattan remaining linear throughout.
